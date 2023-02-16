@@ -7,7 +7,7 @@ on:
     branches: 
       [ main ]
     paths:
-    - '/Lab_6/App/**'
+    - './Lab_6/App/**'
     - '.github/workflows/hello-AutoDeployTrigger-e451ad47-65f8-4aa4-ab5f-a9f009de3a3e.yml'
 
   # Allow mannually trigger 
@@ -36,8 +36,8 @@ jobs:
         with:
           push: true
           tags: rmoacr2022.azurecr.io/hello:${{ github.sha }}
-          file: /Lab_6/App/Dockerfile
-          context: /Lab_6/App/
+          file: ./Lab_6/App/Dockerfile
+          context: ./Lab_6/App/
 
 
   deploy:
